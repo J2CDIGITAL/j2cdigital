@@ -3,32 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Material do aluno · Tráfego Pago com IA · J2C Digital</title>
-<meta name="description" content="Passo a passo do workshop Tráfego Pago com IA: pedidos prontos para copiar, checklists e contato.">
+<title>Workshop Tráfego Pago com IA · J2C Digital</title>
+<meta name="robots" content="noindex">
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/aluno.css">
+<style>
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px}
+.hub{width:100%;max-width:760px;text-align:center}
+.hub img.logo{width:190px;height:auto;margin-bottom:22px}
+.tag{font-family:var(--f-label);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-size:14px;margin:0 0 10px}
+h1{font-family:var(--f-display);font-size:clamp(24px,5vw,40px);line-height:1.15;margin:0 0 12px;font-weight:400}
+h1 span{color:var(--gold-l)}
+.sub{color:var(--ink-soft);margin:0 0 30px;font-size:17px}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.btn{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 16px;transition:.2s}
+.btn:hover,.btn:focus-visible{border-color:var(--gold);transform:translateY(-2px);outline:none}
+.btn b{display:block;font-family:var(--f-display);font-size:15px;color:var(--gold-l);margin-bottom:8px;font-weight:400}
+.btn small{color:var(--ink-soft);font-size:14px;line-height:1.35;display:block}
+.foot{margin-top:28px;color:var(--ink-soft);font-size:14px}
+</style>
 </head>
-<body class="al">
-<header class="hero">
-  <img src="img/logo-j2c.png" alt="J2C Digital" class="logo">
-  <p class="tag">Workshop gratuito · {{evento}}</p>
+<body>
+<main class="hub">
+  <img class="logo" src="img/logo-j2c.png" alt="J2C Digital">
+  <p class="tag">Workshop gratuito · Festival Ame Seu Vizinho 2026</p>
   <h1>Tráfego Pago <span>com IA</span></h1>
-  <p class="lead">Seu material para guardar: o caminho em 6 passos, pedidos prontos para copiar e checklists. Funciona no celular.</p>
-  <nav id="nav"></nav>
-  <a class="igbig" id="igTop" href="#" target="_blank" rel="noopener"><span class="igdot"></span><span><b>Veja os depoimentos no Instagram</b><small id="igTxt"></small></span></a>
-  <div class="row noprint" style="margin-top:12px"><button class="print" onclick="window.print()">Baixar / imprimir em PDF</button><button class="print" id="tema">Tema claro</button></div>
-</header>
-<main id="main"></main>
-<footer>
-  <p><b>{{nome}}</b> · {{cargo}}</p>
-  <p>{{slogan}}</p>
-  <p class="small">Telas e menus da Meta mudam com frequência: se algum nome estiver diferente, siga a ideia do passo.</p>
-</footer>
-<script src="js/qrcode.js"></script>
-<script src="js/config.js"></script>
-<script src="js/common.js"></script>
-<script src="js/aluno.js"></script>
+  <p class="sub">Escolha a tela que você vai usar.</p>
+  <div class="grid">
+    <a class="btn" href="projetor"><b>Projetor</b><small>Tela do telão, com a bolinha dourada e os cronômetros</small></a>
+    <a class="btn" href="apresentador"><b>Apresentador</b><small>Roteiro, anotações, tempo e controle das telas</small></a>
+    <a class="btn" href="aluno"><b>Aluno</b><small>Material para guardar: prompts, checklists e contato</small></a>
+  </div>
+  <p class="foot">Joelce Cunha · Estrategista Digital</p>
+</main>
 </body>
 </html>

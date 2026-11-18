@@ -24,8 +24,8 @@ window.J2C = {
   local: 'CC Videira Sul · Rua Eliseu Oriá, 1553 · José de Alencar · Fortaleza (CE)',
 
   /* Endereço da página do aluno: por padrão é o próprio site onde isto está publicado */
-  alunoUrl: function () { return location.origin + '/'; },
-  praticaUrl: function () { return location.origin + '/#pratica'; },
+  alunoUrl: function () { return location.origin + '/aluno'; },
+  praticaUrl: function () { return location.origin + '/aluno#pratica'; },
 
   /* Assistente de IA usado nos exercícios */
   iaNome: 'Claude',
