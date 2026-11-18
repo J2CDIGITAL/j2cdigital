@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apresentador · Workshop Tráfego Pago com IA · J2C Digital</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/apresentador.css">
+</head>
+<body class="ap">
+<header class="top">
+  <img src="img/logo-j2c.png" alt="J2C Digital">
+  <div class="timer"><small>TOTAL</small><span id="clock">00:00</span><small>de 50:00</small></div>
+  <div class="timer reg" id="regBox"><small>ESTA TELA</small><span id="reg">0:00</span></div>
+  <div id="delay" class="delay">no horário</div>
+  <div class="btns">
+    <button id="bStart">Iniciar relógio</button>
+    <button id="bReset" class="ghost">Zerar</button>
+    <button id="bOpen">Abrir projetor</button>
+    <button id="bBlank" class="ghost">Tela preta</button>
+    <button id="bTheme" class="ghost">Tema claro</button>
+  </div>
+</header>
+<main class="grid">
+  <aside class="list" id="list"></aside>
+  <section class="center">
+    <div class="now"><div class="lbl">Agora no projetor <span id="cnt"></span></div><div class="frame"><iframe id="fNow" src="projetor.html?embed=1" title="Tela atual"></iframe></div></div>
+    <div class="ctrl">
+      <button id="bPrev" class="ghost">← Tela anterior</button>
+      <button id="bReplay" class="ghost">↻ Repetir animação</button>
+      <button id="bNext">Próxima tela →</button>
+    </div>
+    <div class="nxt"><div class="lbl">Próxima tela</div><div class="frame small"><iframe id="fNext" title="Próxima tela" tabindex="-1"></iframe></div></div>
+  </section>
+  <aside class="notes">
+    <h2 id="nTitle"></h2>
+    <div id="nBlock" class="blk"></div>
+    <div id="nBody"></div>
+  </aside>
+</main>
+<script src="js/qrcode.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/apresentador.js"></script>
+</body>
+</html>

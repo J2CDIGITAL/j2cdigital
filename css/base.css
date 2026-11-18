@@ -1,0 +1,29 @@
+/* Base compartilhada: fontes locais (funcionam sem internet), cores e reset. */
+@font-face { font-family: 'Michroma'; src: url('../fonts/michroma-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Barlow'; src: url('../fonts/barlow-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Barlow'; src: url('../fonts/barlow-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Barlow'; src: url('../fonts/barlow-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Barlow Semi Condensed'; src: url('../fonts/barlow-semi-condensed-latin-500-normal.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Barlow Semi Condensed'; src: url('../fonts/barlow-semi-condensed-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+
+:root {
+  --bg: #0a0a0b;
+  --bg2: #121215;
+  --card: #16161a;
+  --line: #2d2a22;
+  --gold: #c9a45c;       /* dourado para textos e detalhes */
+  --gold-d: #8d7448;     /* dourado da logo */
+  --gold-l: #ecd498;     /* dourado claro / brilho */
+  --ink: #f4f1ea;
+  --ink-soft: #b9b3a6;
+  --ok: #7fd1a0;
+  --warn: #e7b05a;
+  --bad: #e2766b;
+  --f-display: 'Michroma', 'Eurostile', 'Arial Black', sans-serif;
+  --f-body: 'Barlow', 'Segoe UI', system-ui, sans-serif;
+  --f-label: 'Barlow Semi Condensed', 'Barlow', sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+img { max-width: 100%; }

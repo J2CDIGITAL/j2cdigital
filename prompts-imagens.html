@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompts de imagens (Gemini) · Workshop J2C Digital</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="stylesheet" href="css/base.css">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0a0a0b;color:var(--ink);font:500 17px/1.55 var(--f-body);padding:26px 20px 70px}
+.w{max-width:860px;margin:0 auto}h1{font:400 28px/1.2 var(--f-display);margin:0 0 8px}h1 span{color:var(--gold)}
+.tag{font:600 13px var(--f-label);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.lead{color:#cfc9b8}ol{padding-left:22px}li{margin:6px 0}
+.card{background:#111010;border:1px solid #2a2418;border-radius:16px;padding:16px 18px;margin:18px 0}
+.card h2{font:400 18px var(--f-display);color:var(--gold-l);margin:0 0 6px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}.meta span{font:600 13px var(--f-label);letter-spacing:.08em;border:1px solid var(--gold-d);border-radius:99px;padding:3px 12px;color:var(--gold-l)}
+.pr{white-space:pre-wrap;background:#0d0c0a;border:1px dashed var(--gold-d);border-radius:10px;padding:12px;font-size:16px}
+button{font:700 15px var(--f-body);background:var(--gold);color:#0a0a0b;border:0;border-radius:10px;padding:10px 16px;cursor:pointer;margin-top:10px}
+.note{background:#17140d;border-left:3px solid var(--gold);padding:10px 14px;border-radius:0 10px 10px 0;font-size:15px;color:#e3dcc6;margin:14px 0}
+code{background:#1c1a14;padding:1px 6px;border-radius:5px;color:var(--gold-l)}
+</style>
+</head>
+<body>
+<div class="w">
+<div class="tag">Material de apoio · uso interno</div>
+<h1>Prompts para criar as imagens no <span>Gemini</span></h1>
+<p class="lead">São 7 imagens. Cada uma já tem um espaço reservado nos slides e no material do aluno: assim que o arquivo existir, ele aparece sozinho, nos slides e no PDF.</p>
+<ol>
+<li>Copie o prompt e cole no Gemini (peça a imagem no formato indicado).</li>
+<li>Baixe como <b>PNG</b> e salve com o <b>nome exato</b> do arquivo.</li>
+<li>Envie para a pasta <code>img/ia</code> do repositório (GitHub: <code>upload/main/img/ia</code>).</li>
+<li>Para o PDF do aluno: abra o material, toque em “Baixar / imprimir em PDF” e salve como PDF.</li>
+</ol>
+<div class="note"><b>Padrão visual de todas as imagens:</b> fundo preto com brilho dourado (#c9a45c), telas brancas limpas, sem logotipos de empresas reais, textos curtos em português do Brasil. Se o Gemini errar algum texto, peça: “refaça com os textos escritos exatamente assim: …”.</div>
+<div id="list"></div>
+</div>
+<script>
+var BASE = ' Estilo: ilustração de mockup moderna e limpa, fundo preto com leve brilho dourado (#c9a45c), telas brancas com detalhes em azul, alto contraste, sem logotipos nem marcas de empresas reais, textos curtos e legíveis em português do Brasil.';
+var L = [
+ ['gerenciador-desktop.jpg','1. Gerenciador de anúncios no computador','Paisagem 16:10 (1600×1000)',
+  'Crie um mockup de um notebook moderno exibindo um painel genérico de gerenciador de anúncios de redes sociais. Barra lateral esquerda com os itens: Campanhas, Conjuntos, Anúncios, Públicos. Área principal com uma tabela com as colunas Nome, Resultados, Custo por resultado e Valor usado, um gráfico de linhas em alta e um botão azul escrito “+ Criar”.' + BASE],
+ ['perfil-instagram.jpg','2. Exemplo de um bom perfil de Instagram','Retrato 9:16 (1080×1920)',
+  'Crie um mockup de um smartphone exibindo o perfil de uma rede social de fotos de um negócio local (salão de beleza), bem montado: foto de perfil redonda com um logotipo simples, nome “Studio Ana Costa”, bio curta “Unhas que duram · Fortaleza-CE”, botão verde “WhatsApp”, destaques circulares chamados Serviços, Preços, Depoimentos e Antes e depois, e uma grade 3×3 de posts organizados em tons de dourado e creme. Não use o logotipo do Instagram.' + BASE],
+ ['seguidor-x-cliente.jpg','3. Seguidor x cliente','Quadrada 1:1 (1200×1200)',
+  'Crie uma ilustração quadrada dividida em duas metades. Lado esquerdo, com o título “Seguidor”: uma multidão de silhuetas de pessoas em cinza apagado, cada uma com um pequeno coração, e uma carteira vazia. Lado direito, com o título “Cliente”: uma única pessoa em destaque dourado, um balão de conversa verde com o símbolo de telefone e uma sacola de compras com moedas. No centro, um sinal de diferente (≠) em dourado.' + BASE],
+ ['suite-celular.jpg','4. Gerenciador de anúncios no celular','Retrato 9:16 (1080×1920)',
+  'Crie um mockup de um smartphone exibindo um aplicativo genérico de gerenciamento de anúncios: no topo o título “Resumo”, três cartões com os números “Alcance”, “Mensagens” e “Custo por conversa”, um gráfico de barras em alta, uma lista com duas campanhas ativas (bolinha verde) e um botão azul “Criar anúncio” na parte de baixo. Não use o logotipo da Meta nem de nenhum aplicativo real.' + BASE],
+ ['campanha-config.jpg','5. Configurações da campanha','Paisagem 16:10 (1600×1000)',
+  'Crie uma tela genérica de configuração de campanha de anúncios em um navegador. Três colunas: “1 · Objetivo” com as opções Reconhecimento, Tráfego, Engajamento (selecionada) e Vendas; “2 · Onde chegam?” com Site, Apps de mensagens (selecionada, com ícone de balão de conversa) e Perfil; “3 · Ajustes” com Orçamento diário “R$ 20”, Público “Vídeo 75%” e Botão “Enviar mensagem”. Destaque as opções selecionadas com borda azul.' + BASE],
+ ['landing-claude-celular.jpg','6. Criando a landing page com IA no celular','Retrato 9:16 (1080×1920)',
+  'Crie um mockup de um smartphone dividido em duas partes. Parte de cima: uma conversa com um assistente de inteligência artificial, com o balão do usuário escrito “Crie uma página de vendas para o meu negócio, com botão de WhatsApp”. Parte de baixo: a página de vendas gerada, com título grande, três benefícios com ícones, um espaço de depoimento e um botão verde grande “Falar no WhatsApp”. Tons suaves de coral e creme na área da conversa. Não use logotipos reais.' + BASE],
+ ['claude-logo.png','7. Logo do Claude','Quadrada 1:1 (1024×1024)',
+  'Crie um ícone de aplicativo quadrado com cantos arredondados, fundo na cor terracota-coral (#d97757), com um símbolo branco simples em formato de faísca de várias pontas no centro, estilo minimalista e plano, sem texto, fundo da imagem transparente ou preto.\\n\\nOBSERVAÇÃO: este prompt gera apenas um ícone parecido. O ideal é usar o arquivo oficial do logo do Claude (baixe nos materiais de marca da Anthropic ou faça uma captura do ícone do próprio aplicativo) e salvá-lo como claude-logo.png.']
+];
+var h='';
+L.forEach(function(x,i){h+='<div class="card"><h2>'+x[1]+'</h2><div class="meta"><span>Arquivo: '+x[0]+'</span><span>'+x[2]+'</span></div><div class="pr" id="p'+i+'"></div><button data-i="'+i+'">Copiar prompt</button></div>';});
+document.getElementById('list').innerHTML=h;
+L.forEach(function(x,i){document.getElementById('p'+i).textContent=x[3].replace(/\\n/g,'\n');});
+document.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var t=L[+b.dataset.i][3].replace(/\\n/g,'\n');
+ function ok(){var o=b.textContent;b.textContent='Copiado!';setTimeout(function(){b.textContent=o},1400)}
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,fb);else fb();
+ function fb(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(_){}a.remove()}});
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projetor · Workshop Tráfego Pago com IA · J2C Digital</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/projetor.css">
+</head>
+<body class="proj">
+<div id="stage">
+  <div class="bg"></div>
+  <header class="hud"><img class="hud-logo" src="img/logo-j2c.png" alt="J2C Digital"><div id="hudBlock"></div></header>
+  <main id="scene"></main>
+  <div id="rings"></div>
+  <div id="dot"><i></i></div>
+  <footer class="hud-b"><div class="bar"><b id="barFill"></b></div><div class="clk"><span class="reg"><i>TELA</i><b id="clkScene">0:00</b></span><span class="tot"><i>TOTAL</i><b id="clkTotal">0:00</b></span></div><span id="counter"></span></footer>
+  <div id="blank"></div>
+</div>
+<div id="help">
+  <b>Atalhos</b><br>
+  → ou Espaço: próxima tela (a bolinha monta sozinha; toque de novo para completar) · ←: voltar<br>
+  F: tela cheia · B: tela preta · T: tema claro/escuro<br>R: repetir a animação · C: esconder cronômetros · A: sem animações<br>
+  Clique: avançar · Botão direito: voltar
+</div>
+<div id="toast"></div>
+<script src="js/qrcode.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/stage.js"></script>
+</body>
+</html>
